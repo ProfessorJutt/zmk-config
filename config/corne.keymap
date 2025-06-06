@@ -64,12 +64,6 @@
             >;
         };
     };
-
-
-    backlight {
-        compatible = "zmk,backlight-behavior";
-        color = <255 80 0>; // Red
-    };
 };
 
 
