@@ -1,0 +1,17 @@
+/ {
+    ws2812b_underglow: ws2812b_ug {
+        compatible = "zmk,underglow";
+        label = "WS2812B Underglow";
+        chain-length = <6>; // match left
+        data-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+        spi-max-frequency = <800000>;
+    };
+
+    sk6812_backlight: sk6812_bl {
+        compatible = "zmk,backlight";
+        label = "SK6812 Backlight";
+        chain-length = <42>;
+        data-gpios = <&gpio0 4 GPIO_ACTIVE_HIGH>;
+        spi-max-frequency = <800000>;
+    };
+};
