@@ -1,13 +1,32 @@
 / {
-    backlight: backlight {
-        compatible = "zmk,backlight";
+    led_strip: led_strip {
+        compatible = "zmk,led-strip";
+        label = "LED Strip";
+        chain-length = <27>;               // Total LEDs: backlight + underglow
+        io-channels = <&adc 0>;
+        color-order = "GRB";
+        spi-max-frequency = <8000000>;
+        data-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>; // P0.06
+        status = "okay";
+    };
+
+    backlight {
+        compatible = "zmk,backlight-led-strip";
         label = "Backlight";
-        chain-length = <27>;              // Number of SK6812 LEDs
-        color-order = <0>;                // 0 = RGB, 1 = GRB (adjust if needed)
-        data-gpios = <&gpio0 4 GPIO_ACTIVE_HIGH>; // Update with your actual data pin
+        index = <0>;
+        count = <21>;
+        color = <255 255 255>;
+    };
+
+    underglow {
+        compatible = "zmk,underglow";
+        label = "Underglow";
+        index = <21>;
+        count = <6>;
     };
 
     chosen {
         zmk,backlight = &backlight;
+        zmk,underglow = &underglow;
     };
 };
