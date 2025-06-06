@@ -1,17 +1,15 @@
 / {
-    ws2812b_underglow: ws2812b_ug {
-        compatible = "zmk,underglow";
-        label = "WS2812B Underglow";
-        chain-length = <6>; // match left
-        data-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
-        spi-max-frequency = <800000>;
-    };
-
-    sk6812_backlight: sk6812_bl {
+    backlight: backlight {
         compatible = "zmk,backlight";
-        label = "SK6812 Backlight";
-        chain-length = <42>;
-        data-gpios = <&gpio0 4 GPIO_ACTIVE_HIGH>;
-        spi-max-frequency = <800000>;
+        label = "Backlight";
+        chain-length = <21>; // Number of SK6812s on the left
+        color-order = <0>; // 0 = RGB, 1 = GRB (use GRB if red appears green)
+        data-gpios = <&gpio0 4 GPIO_ACTIVE_HIGH>; // Your actual data pin for key LEDs
+    };
+};
+
+&zmk {
+    chosen {
+        zmk,backlight = &backlight;
     };
 };
