@@ -9,7 +9,12 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
+&led_strip {
+    chain-length = <27>; // 21 per-key + 6 underglow LEDs per half
+};
+
 / {
+
     keymap {
         compatible = "zmk,keymap";
 
