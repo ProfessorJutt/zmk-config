@@ -15,18 +15,19 @@
 };
 
 / {
+
+    behaviors {
+        layer_hold: lgui_layer_hold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            bindings = <&kp>, <&mo>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
-        behaviors {
-            layer_hold: lgui_layer_hold {
-                compatible = "zmk,behavior-hold-tap";
-                #binding-cells = <2>;
-                flavor = "hold-preferred";
-                tapping-term-ms = <200>;
-                quick-tap-ms = <125>;
-                bindings = <&kp>, <&mo>;
-            };
-        };
 
         default_layer {
             // -----------------------------------------------------------------------------------------
