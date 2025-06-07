@@ -17,7 +17,7 @@
         tile_swap: tile_swap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&mo 1 &kp LGUI>, <&macro_release>;
+            bindings = <&mo 1 &kp LGUI>, <&macro_pause_for_release>;
 
             label = "tile_swap";
         };
