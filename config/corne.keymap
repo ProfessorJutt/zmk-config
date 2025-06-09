@@ -14,7 +14,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LGUI &sl 0>;
-            label = "tile_swap";
         };
     };
 
