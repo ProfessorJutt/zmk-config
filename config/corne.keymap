@@ -47,12 +47,12 @@
             tapping-term-ms = <160>;
             bindings = <&mt LGUI BACKSPACE>, <&kp BACKSPACE>;
         };
-        // tile_ret: tile_ret {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <160>;
-        //     bindings = <&tsm>, <&kp RET>;
-        // };
+        tile_ret: tile_ret {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <160>;
+            bindings = <&tsm>, <&kp>;
+        };
     };
 
     keymap {
@@ -63,7 +63,7 @@
 &kp TAB         &kp Q  &kp W  &kp E  &kp R      &kp T     &kp Y    &kp U   &kp I      &kp O    &kp P     &kp MINUS
 &kp LEFT_SHIFT  &kp A  &kp S  &kp D  &kp F      &kp G     &kp H    &kp J   &kp K      &kp L    &kp SEMI  &kp BACKSLASH
 &kp LCTRL       &kp Z  &kp X  &kp C  &kp V      &kp B     &kp N    &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp P
-                              &mo 3  &lt 2 ESC  &td_back    &lt &tsm RET   &lt 1 SPACE  &kp LEFT_ALT
+                              &mo 3  &lt 2 ESC  &td_back    &tile_ret 0 RET   &lt 1 SPACE  &kp LEFT_ALT
             >;
         };
 
