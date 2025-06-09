@@ -43,7 +43,7 @@
         symbols {
             bindings = <
 &kp TILDE  &kp EXCL          &kp AT             &kp HASH        &kp DLLR              &kp PRCNT           &kp CARET  &kp AMPS   &kp ASTRK  &trans  &trans  &trans
-&kp GRAVE  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp mt_brackets     &kp PLUS   &kp MINUS  &kp EQUAL  &trans  &trans  &trans
+&kp GRAVE  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &mt_brackets     &kp PLUS   &kp MINUS  &kp EQUAL  &trans  &trans  &trans
 &trans     &trans            &trans             &trans          &kp HOME              &kp END             &trans     &trans     &trans     &trans  &trans  &trans
                                                 &trans          &trans                &trans              &trans     &trans     &trans
             >;
