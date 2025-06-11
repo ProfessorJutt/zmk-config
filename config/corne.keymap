@@ -44,7 +44,7 @@
         td_back: td_back {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <160>;
+            tapping-term-ms = <90>;
             bindings = <&mt LGUI BACKSPACE>, <&kp BACKSPACE>;
         };
         tile_ret: tile_ret {
